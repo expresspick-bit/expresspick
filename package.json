@@ -11,5 +11,8 @@
     "build": "echo \"Build scripts will be added later\"",
     "lint": "echo \"Linting will be added later\"",
     "test": "echo \"Testing will be added later\""
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
   }
 }
