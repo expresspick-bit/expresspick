@@ -1,0 +1,15 @@
+{
+  "name": "expresspick",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.32.1",
+  "description": "ExpressPick Multi-Supermarket Shopping Platform",
+  "author": "ExpressPick",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "echo \"Development scripts will be added later\"",
+    "build": "echo \"Build scripts will be added later\"",
+    "lint": "echo \"Linting will be added later\"",
+    "test": "echo \"Testing will be added later\""
+  }
+}

@@ -1,0 +1,29 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  apps/customer: {}
+
+  apps/owner: {}
+
+  apps/supermarket-admin: {}
+
+  apps/worker: {}
+
+  packages/config: {}
+
+  packages/shared: {}
+
+  packages/supabase: {}
+
+  packages/types: {}
+
+  packages/ui: {}
+
+  packages/validation: {}
