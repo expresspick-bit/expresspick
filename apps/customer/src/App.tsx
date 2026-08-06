@@ -1,12 +1,5 @@
-import './App.css'
+import AppRoutes from "./routes";
 
-function App() {
-  return (
-    <main className="app">
-      <h1>Customer App</h1>
-      <p>Welcome to ExpressPick.</p>
-    </main>
-  )
+export default function App() {
+  return <AppRoutes />;
 }
-
-export default App
