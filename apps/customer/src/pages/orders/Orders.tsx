@@ -1,3 +1,3 @@
 export default function Orders() {
-return <h1>Orders</h1>;
+return <h1>orders</h1>;
     }

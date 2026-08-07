@@ -1,22 +1,104 @@
-type HeaderProps = {
-  title: string;
-};
 
-export default function Header({ title }: HeaderProps) {
-  return (
-    <header
-      style={{
-        height: "60px",
-        background: "#0D6EFD",
-        color: "#fff",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: "20px",
-        fontWeight: "bold",
-      }}
-    >
-      {title}
-    </header>
-  );
-}
+
+
+
+
+type HeaderProps = {
+  userName?: string;
+    logo?: string;
+    };
+
+    export default function Header({
+      userName = "Guest",
+        logo = "/logo.png",
+        }: HeaderProps) {
+          return (
+              <header
+                    style={{
+                            display: "flex",
+                                    alignItems: "center",
+                                            justifyContent: "space-between",
+                                                    padding: "15px 20px",
+                                                            backgroundColor: "#1565C0",
+                                                                    color: "#fff",
+                                                                            borderBottomLeftRadius: "20px",
+                                                                                    borderBottomRightRadius: "20px",
+                                                                                            boxShadow: "0 3px 10px rgba(0,0,0,0.15)",
+                                                                                                  }}
+                                                                                                      >
+                                                                                                            <div
+                                                                                                                    style={{
+                                                                                                                              display: "flex",
+                                                                                                                                        alignItems: "center",
+                                                                                                                                                }}
+                                                                                                                                                      >
+                                                                                                                                                              <img
+                                                                                                                                                                        src={logo}
+                                                                                                                                                                                  alt="ExpressPick Logo"
+                                                                                                                                                                                            style={{
+                                                                                                                                                                                                        width: "55px",
+                                                                                                                                                                                                                    height: "55px",
+                                                                                                                                                                                                                                borderRadius: "50%",
+                                                                                                                                                                                                                                            objectFit: "cover",
+                                                                                                                                                                                                                                                        backgroundColor: "#fff",
+                                                                                                                                                                                                                                                                    border: "2px solid white",
+                                                                                                                                                                                                                                                                              }}
+                                                                                                                                                                                                                                                                                      />
+
+                                                                                                                                                                                                                                                                                              <div style={{ marginLeft: "12px" }}>
+                                                                                                                                                                                                                                                                                                        <div
+                                                                                                                                                                                                                                                                                                                    style={{
+                                                                                                                                                                                                                                                                                                                                  fontSize: "14px",
+                                                                                                                                                                                                                                                                                                                                                opacity: 0.9,
+                                                                                                                                                                                                                                                                                                                                                            }}
+                                                                                                                                                                                                                                                                                                                                                                      >
+                                                                                                                                                                                                                                                                                                                                                                                  Welcome
+                                                                                                                                                                                                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                      <div
+                                                                                                                                                                                                                                                                                                                                                                                                                  style={{
+                                                                                                                                                                                                                                                                                                                                                                                                                                fontSize: "20px",
+                                                                                                                                                                                                                                                                                                                                                                                                                                              fontWeight: "bold",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                {userName}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <button
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      style={{
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                background: "white",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          color: "#1565C0",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    border: "none",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              borderRadius: "50%",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        width: "42px",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  height: "42px",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            cursor: "pointer",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      fontSize: "20px",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            🔔
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </header>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
