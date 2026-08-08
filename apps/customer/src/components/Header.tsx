@@ -1,20 +1,18 @@
 
-
-
-
-
 type HeaderProps = {
   userName?: string;
-    logo?: string;
-    };
+  logo?: string;
+  title?: string;
+};
 
-    export default function Header({
-      userName = "Guest",
-        logo = "/logo.png",
-        }: HeaderProps) {
-          return (
-              <header
-                    style={{
+export default function Header({
+  userName = "Guest",
+  logo = "/logo.png",
+  title,
+}: HeaderProps) {
+  return (
+    <header
+      style={{
                             display: "flex",
                                     alignItems: "center",
                                             justifyContent: "space-between",
@@ -46,6 +44,17 @@ type HeaderProps = {
                                                                                                                                                                                                                                                                                       />
 
                                                                                                                                                                                                                                                                                               <div style={{ marginLeft: "12px" }}>
+                                                                                                                                                                                                                                                                                                        {title ? (
+                                                                                                                                                                                                                                                                                                          <div
+                                                                                                                                                                                                                                                                                                            style={{
+                                                                                                                                                                                                                                                                                                              fontSize: "16px",
+                                                                                                                                                                                                                                                                                                              fontWeight: "700",
+                                                                                                                                                                                                                                                                                                              marginBottom: "4px",
+                                                                                                                                                                                                                                                                                                            }}
+                                                                                                                                                                                                                                                                                                          >
+                                                                                                                                                                                                                                                                                                            {title}
+                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                        ) : null}
                                                                                                                                                                                                                                                                                                         <div
                                                                                                                                                                                                                                                                                                                     style={{
                                                                                                                                                                                                                                                                                                                                   fontSize: "14px",

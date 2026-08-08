@@ -60,6 +60,7 @@ export default function Home() {
 
                                                                                                                                                                                                                                                      return (
                                                                                                                                                                                                                                                          <>
+                                                                                                                                                                                                                                                             <Header title="Expresspick" />
                                                                                                                                                                                                                                                                <Header userName="Customer" />
 
                                                                                                                                                                                                                                                                      <div

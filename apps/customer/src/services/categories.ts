@@ -1,10 +1,9 @@
 import { supabase } from "./supabase";
 
-export async function getProducts() {
+export async function getCategories() {
   const { data, error } = await supabase
-    .from("products")
+    .from("categories")
     .select("*")
-    .eq("availability", true)
     .order("name");
 
   if (error) throw error;
