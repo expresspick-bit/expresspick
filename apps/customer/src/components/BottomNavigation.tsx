@@ -1,40 +1,84 @@
-import { Link } from "react-router-dom";
 
-export default function BottomNav() {
-  return (
-    <nav
-      style={{
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        width: "100%",
-        height: "60px",
-        backgroundColor: "#1565C0",
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center",
-        color: "#ffffff",
-      }}
-    >
-      <Link to="/" style={{ color: "#fff", textDecoration: "none" }}>
-        Home
-      </Link>
+ import { Link, useLocation } from "react-router-dom";
 
-      <Link to="/categories" style={{ color: "#fff", textDecoration: "none" }}>
-        Categories
-      </Link>
+ export default function BottomNavigation() {
+   const location = useLocation();
 
-      <Link to="/cart" style={{ color: "#fff", textDecoration: "none" }}>
-        Cart
-      </Link>
+     const tabs = [
+         {
+               name: "Home",
+                     path: "/",
+                           icon: "🏠",
+                               },
+                                   {
+                                         name: "Categories",
+                                               path: "/categories",
+                                                     icon: "🛍️",
+                                                         },
+                                                             {
+                                                                   name: "Cart",
+                                                                         path: "/cart",
+                                                                               icon: "🛒",
+                                                                                   },
+                                                                                       {
+                                                                                             name: "Orders",
+                                                                                                   path: "/orders",
+                                                                                                         icon: "📦",
+                                                                                                             },
+                                                                                                                 {
+                                                                                                                       name: "Profile",
+                                                                                                                             path: "/profile",
+                                                                                                                                   icon: "👤",
+                                                                                                                                       },
+                                                                                                                                         ];
 
-      <Link to="/orders" style={{ color: "#fff", textDecoration: "none" }}>
-        Orders
-      </Link>
+                                                                                                                                           return (
+                                                                                                                                               <nav
+                                                                                                                                                     style={{
+                                                                                                                                                             position: "fixed",
+                                                                                                                                                                     bottom: 0,
+                                                                                                                                                                             left: 0,
+                                                                                                                                                                                     right: 0,
+                                                                                                                                                                                             height: "70px",
+                                                                                                                                                                                                     backgroundColor: "#ffffff",
+                                                                                                                                                                                                             borderTop: "1px solid #E5E7EB",
+                                                                                                                                                                                                                     display: "flex",
+                                                                                                                                                                                                                             justifyContent: "space-around",
+                                                                                                                                                                                                                                     alignItems: "center",
+                                                                                                                                                                                                                                             boxShadow: "0 -2px 10px rgba(0,0,0,0.08)",
+                                                                                                                                                                                                                                                     zIndex: 1000,
+                                                                                                                                                                                                                                                           }}
+                                                                                                                                                                                                                                                               >
+                                                                                                                                                                                                                                                                     {tabs.map((tab) => {
+                                                                                                                                                                                                                                                                             const active = location.pathname === tab.path;
 
-      <Link to="/profile" style={{ color: "#fff", textDecoration: "none" }}>
-        Profile
-      </Link>
-    </nav>
-  );
-}
+                                                                                                                                                                                                                                                                                     return (
+                                                                                                                                                                                                                                                                                               <Link
+                                                                                                                                                                                                                                                                                                           key={tab.path}
+                                                                                                                                                                                                                                                                                                                       to={tab.path}
+                                                                                                                                                                                                                                                                                                                                   style={{
+                                                                                                                                                                                                                                                                                                                                                 textDecoration: "none",
+                                                                                                                                                                                                                                                                                                                                                               color: active ? "#1565C0" : "#777",
+                                                                                                                                                                                                                                                                                                                                                                             display: "flex",
+                                                                                                                                                                                                                                                                                                                                                                                           flexDirection: "column",
+                                                                                                                                                                                                                                                                                                                                                                                                         alignItems: "center",
+                                                                                                                                                                                                                                                                                                                                                                                                                       fontSize: "12px",
+                                                                                                                                                                                                                                                                                                                                                                                                                                     fontWeight: active ? "bold" : "normal",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                           >
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <span
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     style={{
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     fontSize: "22px",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     marginBottom: "3px",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               >
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             {tab.icon}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </span>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     {tab.name}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               </Link>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             })}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </nav>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   }
