@@ -1,7 +1,7 @@
-import React from "react";
-import Header from "../components/Header";
-import Button from "../components/Button";
-import BottomNavigation from "../components/BottomNavigation";
+
+import Header from "../../components/Header";
+import Button from "../../components/Button";
+import BottomNavigation from "../../components/BottomNavigation";
 
 export default function Profile() {
   return (
